@@ -167,7 +167,7 @@ section[name="secao-imagem-larga"] img {
 	section[name="fold"] .media-links {
 		position: fixed;
 		top: 50px;
-		right: 96px;
+		right: 116px;
 		width: auto;
 		z-index: 11;
 	}
@@ -261,6 +261,11 @@ section[name="secao-imagem-larga"] img {
 	}
 
 	section[name="our-place"] > .section-image img {
+		height: 600px !important;
+	}
+
+	.second-circular-section img {
+		width: 1700px !important;
 		height: 600px !important;
 	}
 }
@@ -397,7 +402,7 @@ section[name="secao-imagem-larga"] img {
 			</div>
 		</div>
 	</section>
-	<section class="lightweight" style="background-color:#b5e8c5; margin-top: 0px; padding-top: 60px;">
+	<section class="lightweight second-circular-section" style="background-color:#b5e8c5; margin-top: 0px; padding-top: 60px;">
 		<h3 style="font-family: dinneuzeitgroteskltw01-_812426, sans-serif; margin: 0; font-size: 24px;">MUSICA & ENCONTROS</h3>
 		<h3 style="font-family: dinneuzeitgroteskltw01-_812426, sans-serif; margin: 0; font-size: 35px;">EVENTOS</h3>
 		<div class="section-image" style="width: 100%; display: flex; justify-content: center; align-items: center;">
@@ -414,7 +419,8 @@ section[name="secao-imagem-larga"] img {
 					el.setAttribute("href", "https://api.whatsapp.com/send?phone=5548984903009");
 				});
 			}
-			window.addEventListener("scroll", function() {
+			window.addEventListener("scroll", function(ev) {
+				console.log(ev);
 				document.querySelectorAll("img[data-src]").forEach(function(el) {
 					el.setAttribute("src", el.getAttribute("data-src"));
 					el.removeAttribute("data-src");
