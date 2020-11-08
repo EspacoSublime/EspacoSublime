@@ -24,10 +24,41 @@
 	<link rel="stylesheet" href="/belinda/belinda.css">
 	<link rel="stylesheet" href="/dinn/dinn.css">
 	<link rel="stylesheet" href="/lulo-clean/lulo-clean.css">
-	<link rel="stylesheet" href="/header.css">
-	<link rel="stylesheet" href="/footer.css">
 	<link rel="stylesheet" href="/style.css">
 	<style>
+html,body {
+	margin: 0; padding: 0; width: 100vw; min-height: 100vh; overflow-x: hidden;
+}
+section {
+	margin-top: 40px;
+}
+section[name="address"] {
+	background: black;
+	color: white;
+	font-weight: bold;
+	font-family: dinneuzeitgroteskltw01-_812426, sans-serif;
+	text-align: center;
+	letter-spacing:0.05em;
+	padding: 10px 7px 11px 7px;
+	margin: 0;
+}
+section[name="header"] {
+	height: 71px;
+	margin: 0;
+}
+section[name="fold"] {
+	margin: 0;
+}
+.hamburguer-menu {
+	float: right;
+	margin: -43px 21px 0 0;
+	cursor: pointer;
+	padding: 10px 13px 8px 13px;
+}
+.background-wrapper {
+	background-color: #f9db79;
+	min-height: 100px;
+}
 .image-wrapper {
 	padding: 84px 0px 11px 0;
 	display: flex;
@@ -44,7 +75,6 @@
 	object-fit: contain;
 	object-position: center center;
 }
-
 .fold-floating-text {
 	height: 0px;
 	color: white;
@@ -54,14 +84,12 @@
 	font-size: calc(2.22vw + 10.9px);
 	font-weight: normal;
 }
-
 .fold-floating-text > div, .fold-floating-text > h2 {
 	text-align: center;
 	position: relative;
 	margin: 0;
 	text-shadow: 0 0 3px #0000005e;
 }
-
 .fold-floating-text .fold-title {
 	padding-top: 210px;
 	font-family: lulo-clean-w01-one-bold;
@@ -72,9 +100,43 @@
 	font-size: calc(12.41vw - 4.8px);
 	font-weight: normal;
 	text-shadow: 0 0 2px white;
-	/* pointer-events: none; */
+	pointer-events: none;
 }
-
+.project-title {
+	font-family: belindaw00-regular;
+	text-align: center;
+	font-size: 32px;
+	padding-top: 6px;
+	margin: 0;
+	font-weight: normal;
+}
+.media-links {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15px;
+}
+.media-links.small {
+	margin: -10px 0 10px 0;
+	fill: white;
+	color: white;
+}
+.media-links a {
+	width: 48px;
+	height: 48px;
+	min-width: 48px;
+	padding: 8px;
+	/* display: block; */
+}
+.media-links.small a {
+	width: 28px;
+	height: 28px;
+	min-width: 28px;
+}
+.media-links a + a {
+	margin-left: 8px;
+}
 .white-call-to-action-button {
 	color: white;
 	background: rgba(0, 0, 0, 0);
@@ -88,12 +150,10 @@
 	padding: 5px 20px;
 	font-family: dinneuzeitgroteskltw01-_812426;
 }
-
 .white-call-to-action-button:hover {
 	background: rgba(0, 0, 0, 1);
 	border-color: rgba(0, 0, 0, 1);
 }
-
 .black-call-to-action-button {
 	color: black;
 	background: rgba(255, 255, 255, 0);
@@ -107,56 +167,83 @@
 	padding: 5px 20px;
 	font-family: dinneuzeitgroteskltw01-_812426;
 }
-
 .black-call-to-action-button:hover {
 	background: rgba(255, 255, 255, 1);
 	border-color: rgba(255, 255, 255, 1);
 }
-
-section[name="left-image-right-text"] {
-	margin-top: 50px;
+h1, h2, h3, h4 {
+	text-align: center;
+	margin: 0;
 }
-
-.imagem-especial-sorvetes {
-	width: 150%;
-	margin-left: -25%;
-	object-fit: cover;
-	display: block;
-}
-
-section.lightweight {
-	padding-top: 50px;
-}
-
-section[name="our-place"] {
-    padding-top: 50px;
-}
-
-section[name="left-image-right-text"] > .section-text {
-	padding-bottom: 30px;
-}
-
-section[name="secao-imagem-larga"] p, section[name="carnes"] > .section-text p {
-	font-family: dinneuzeitgroteskltw01-_812426;
-	font-size: 18px;
-	display: none;
-	width: 280px;
-	margin: 0 auto;
-}
-
-section[name="secao-imagem-larga"] img {
+.nav-wrapper {
+	display: flex;
+	justify-content: flex-end;
 	width: 100%;
-	object-fit: cover;
-	height: 320px;
 }
-
-.bg-parallax img {
-	width: 300px;
-	object-fit: cover;
+nav {
+	width: 200px;
+	position: relative;
+	z-index: 10;
+	display: flex;
+	display: none;
+	justify-content: center;
+	flex-direction: column;
+	background-color: rgba(47, 46, 46, 0.84);
+	padding: 11px 0px;
+	margin-right: 10px;
 }
-
-
+nav a {
+	display: block;
+	padding: 5px;
+	color: white;
+	font-family: dinneuzeitgroteskltw01-_812426;
+	padding: 5px 20px;
+	font-size: 24px;
+}
+#verticalBar {
+	display: block;
+	height: 0px;
+	color: transparent;
+}
 @media screen and (min-width: 780px) {
+	.hamburguer-menu {
+		display: none;
+	}
+	
+	section[name="carrousel"] .image::-webkit-scrollbar {
+	  height: 5px;
+	  width: 5px;
+	}
+
+	.nav-wrapper {
+	    justify-content: flex-start;
+	    position: fixed;
+	    top: 69px;
+	    left: 0px;
+	    margin: 0;
+	    width: 50%;
+	}
+
+	nav {
+		display: flex;
+		flex-direction: row;
+		background: none;
+		justify-content: flex-start;
+		margin-left: 80px;
+		width: auto;
+		text-shadow: 0 0 3px #ffffff7d;
+		width: auto;
+		display: inline;
+		white-space: nowrap;
+		color: black;
+		text-decoration: none;
+		padding: 5px 14px;
+		font-size: 20px;
+	}
+
+	nav a:hover {
+		text-decoration: underline;
+	}
 	.image-wrapper img {
 		width: 294px;
 		height: 577px;
@@ -164,104 +251,15 @@ section[name="secao-imagem-larga"] img {
 	.fold-floating-text .fold-title {
 		font-size: 124px
 	}
-	section[name="fold"] .media-links {
+	section[name="header"] {
+		background-color: #f9db79;
+	}
+	.media-links {
 		position: fixed;
-		top: 50px;
-		right: 76px;
-		width: auto;
-		z-index: 11;
-	}
-	.fold-floating-text > div, .fold-floating-text > h2 {
-		text-shadow: none;
-		font-size: 35px;
-	}
-	section[name="left-image-right-text"] {
-        margin: 0;
-        display: flex;
-        align-items: center;
-    }
-	section[name="left-image-right-text"] > .section-text {
-        order: 2;
-        flex-basis: 50%;
-        margin-left: 50px;
-        max-width: 417px;
-        padding-bottom: 0;
-        margin-bottom: -10px;
-    }
-	section[name="left-image-right-text"] .section-image {
-		flex-basis: 50%;
-		overflow: hidden;
-	}
-	section[name="left-image-right-text"] .section-image img {
-		height: 400px;
-	}
-	.imagem-especial-sorvetes {
-		width: 120%;
-		margin-left: -10%;
-		object-fit: cover;
-		display: block;
-	}
-	section[name="secao-imagem-larga"] {
-        margin: 0;
-        display: flex;
-        align-items: center;
-        padding-top: 0;
-     }
-	section[name="secao-imagem-larga"] > * {
-		flex-basis: 50%;
-	}
-	section[name="secao-imagem-larga"] p {
-		display: block;
-		text-align:center;
-	}
-
-	section[name="secao-imagem-larga"] img {
-		width: 100%;
-		object-fit: cover;
-		height: 700px;
-	}
-
-	.bg-parallax img {
-		width: 600px;
-	}
-
-	section[name="carnes"] {
-		display: flex;
-		align-items: center;
-		padding: 0;
-	}
-
-	section[name="carnes"] > .section-image {
-		order: 1;
-		flex-basis: 50%;
-		max-width: 50vw;
-	}
-
-	section[name="carnes"] > .section-text {
-	    order: 2;
-		flex-basis: 50%;
-	}
-
-	section[name="carnes"] > .section-text p {
-	    display: flex;
-	}
-
-	section[name="our-place"] {
-		display: flex;
-		align-items: center;
-		padding-top: 0;
-	}
-
-	section[name="our-place"] > .section-text {
-		flex-basis: 30%;
-	}
-
-	section[name="our-place"] > .section-image {
-		flex-basis: 70%;
-	}
-
-	section[name="our-place"] > .section-image img {
-		height: 600px !important;
+	    top: 69px;
+	    left: 0px;
+	    margin: 0;
+	    width: 50%;
 	}
 }
 	</style>
@@ -315,11 +313,7 @@ section[name="secao-imagem-larga"] img {
 		<div class="media-links">
 			<div style="width: 105px; display: flex; justify-content: center; align-items: center">
 				<a target="_self" data-platform="instagram" title="Instagram" href="https://www.instagram.com/sublimespaco/">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 2 10 10">
-						<circle class="a" style="stroke-width: 0.8px;" cx="7" cy="7" r="2.022"/>
-						<circle class="a" style="stroke-width: 0.77px;" cx="9.672" cy="4.328" r="0.217"/>
-						<rect class="a" style="stroke-width: 0.7px;" x="2.378" y="2.378" width="9.244" height="9.244" rx="2.8"/>
-					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs></defs><rect class="a" x="0.5" y="0.5" width="13" height="13" rx="2.826"/><circle class="a" cx="7" cy="7" r="2.022"/><circle class="a" cx="9.672" cy="4.328" r="0.217"/><rect class="a" x="2.378" y="2.378" width="9.244" height="9.244" rx="2.311"/></svg>
 				</a>
 				<a target="_self" data-platform="facebook" title="Facebook" href="https://www.facebook.com/sublimespaco/">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs></defs><path class="a" d="M7.087,13.5H1.078A.578.578,0,0,1,.5,12.922V1.078A.578.578,0,0,1,1.078.5H12.922a.578.578,0,0,1,.578.578V12.922a.578.578,0,0,1-.578.578H9.4V8.589h1.478a.289.289,0,0,0,.287-.253L11.379,6.6a.288.288,0,0,0-.286-.324H9.4V5.662a.974.974,0,0,1,.974-.973H11.42a.289.289,0,0,0,.289-.289V2.667a.289.289,0,0,0-.289-.289H10.372A3.288,3.288,0,0,0,7.087,5.662v.616H5.642a.289.289,0,0,0-.289.289V8.3a.289.289,0,0,0,.289.289H7.087V13.5Z"/></svg>
@@ -330,71 +324,59 @@ section[name="secao-imagem-larga"] img {
 			</div>
 		</div>
 	</section>
-	<section name="left-image-right-text">
-	    <div class="section-text">
-			<h3 style="font-family: dinneuzeitgroteskltw01-_812426; margin: 0; font-weight: normal; letter-spacing: 0.05em; font-size: 30px;">NOSSOS SABORES</h3>
-			<h3 style="font-family: belindaw00-regular; margin: 0; font-weight: normal; font-size: 24px;">Novos, deliciosos e saudáveis!</h3>
-			<p style="font: normal normal normal 17px/1.4em dinneuzeitgroteskltw01-_812426,sans-serif; color: #2F2E2E; padding: 0 38px; text-align: justify;">
-				Sabores de gelato variados, inovadores e saborosos, sem gordura hidrogenada e sem gluten. Também temos diversas opções sem açucar e sem lactose.
-			</p>
-			<div style="text-align: center">
-				<div class="call-to-action" style="margin: 30px 0 20px;"><a class="black-call-to-action-button" href="/cardapio/#sabores">SABORES</a></div>
-			</div>
+	<section>
+		<h3 style="font-family: dinneuzeitgroteskltw01-_812426; margin: 0; font-weight: normal; letter-spacing: 0.05em; font-size: 30px;">NOSSOS SABORES</h3>
+		<h3 style="font-family: belindaw00-regular; margin: 0; font-weight: normal; font-size: 24px;">Novos, deliciosos e saudáveis!</h3>
+		<p style="font: normal normal normal 17px/1.4em dinneuzeitgroteskltw01-_812426,sans-serif; color: #2F2E2E; padding: 0 38px; text-align: justify;">
+			Sabores variados de gelato saborosos, sem gordura hidrogenada, sem gluten e sem conservantes. Também temos diversas opções sem açucar e sem lactose.
+		</p>
+		<div style="text-align: center">
+			<div class="call-to-action" style="margin: 30px 0 40px;"><a class="black-call-to-action-button" href="/cardapio/#sabores">SABORES</a></div>
 		</div>
-		<div class="section-image" style="width: 100%;">
-			<img alt="Gelatos variados" class="imagem-especial-sorvetes" src="/sorvete-hd.webp" />
+		<div class="section-image" style="width: 100%; height: 250px;">
+			<img style="width: 100%; height: 250px; object-fit: cover" alt="Gelato" src="/sorvete.webp" />
 		</div>
 	</section>
-	<section class="lightweight bg-parallax" style="background-color:#e8e4b5">
+	<section name="lightweight" style="background-color:#b5e8d5; margin-top: 0px; padding-top: 60px;">
+		<h3 style="font-family: dinneuzeitgroteskltw01-_812426, sans-serif; margin: 0; font-size: 24px;">CLASSICOS DO VERÃO</h3>
+		<h3 style="font-family: dinneuzeitgroteskltw01-_812426, sans-serif; margin: 0; font-size: 35px; margin-bottom: 15px;">AÇAÍ E MARACUJA</h3>
+		<div class="section-image" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+			<img style="width: 100%; object-fit: cover; height: 320px;" alt="Gelato de Açaí e Maracujá" src="/classicos-do-verao.jpg" />
+		</div>
+	</section>
+	<section name="lightweight" style="background-color:#e8e4b5; margin-top: 0px; padding-top: 60px;">
 		<h3 style="font-family: dinneuzeitgroteskltw01-_812426, sans-serif; margin: 0; font-size: 24px;">SABORES</h3>
 		<h3 style="font-family: dinneuzeitgroteskltw01-_812426, sans-serif; margin: 0; font-size: 35px;">SEM LEITE</h3>
 		<div class="section-image" style="width: 100%; display: flex; justify-content: center; align-items: center;">
-			<img alt="Gelato de Amora e Mirtilo" src="/circular-vermelho.png" />
+			<img style="width: 300px; object-fit: cover;" alt="Gelato de Amora e Mirtilo" src="/circular-vermelho.png" />
 		</div>
 		<div style="text-align: center">
 			<div class="call-to-action" style="padding: 30px 0 50px;"><a class="black-call-to-action-button" href="/cardapio/">CARDAPIO</a></div>
 		</div>
 	</section>
-	<section name="secao-imagem-larga" class="lightweight" style="background-color:#b5e8d5">
-	    <div class="section-title">
-			<h3 style="font-family: dinneuzeitgroteskltw01-_812426, sans-serif; margin: 0; font-size: 24px;">CLASSICOS DO VERÃO</h3>
-			<h3 style="font-family: dinneuzeitgroteskltw01-_812426, sans-serif; margin: 0; font-size: 35px; margin-bottom: 15px;">AÇAÍ E MARACUJA</h3>
-			<p>Aquela combinação de verão perfeita para se refrescar e recuperar a energia! Gelatos de fruta de verdade, saudáveis e gostosos!</p>
-		</div>
+	<section name="lightweight" style="background-color:#e8cab5; margin-top: 0px; padding-top: 60px;">
+		<h3 style="font-family: dinneuzeitgroteskltw01-_812426, sans-serif; margin: 0; font-size: 24px;">ESPETINHOS E SANDUICHES</h3>
+		<h3 style="font-family: dinneuzeitgroteskltw01-_812426, sans-serif; margin: 0; font-size: 35px; margin-bottom: 15px">CHURRASCO</h3>
 		<div class="section-image" style="width: 100%; display: flex; justify-content: center; align-items: center;">
-			<img alt="Gelato de Açaí e Maracujá" src="/classicos-do-verao.jpg" />
+			<img style="width: 101%; overflow: hidden; object-fit: cover;" alt="Gelato de Amora e Mirtilo" src="/churrasquinho.png" />
 		</div>
-	</section>
-	<section name="carnes" class="lightweight" style="background-color:#e8cab5;">
-	    <div class="section-text">
-			<h3 style="font-family: dinneuzeitgroteskltw01-_812426, sans-serif; margin: 0; font-size: 24px;">ESPETINHOS E SANDUICHES</h3>
-			<h3 style="font-family: dinneuzeitgroteskltw01-_812426, sans-serif; margin: 0; font-size: 35px; margin-bottom: 15px">ASSADOS NA BRASA</h3>
-			<p>Sanduiches variados com carne de churrasco de qualidade, suculento e saboroso! Ótimo para matar aquela fome depois de um dia na praia do Campeche!</p>
-			<div class="actions">
-				<div style="text-align: center">
-					<div class="call-to-action" style="padding: 30px 0 50px;"><a class="black-call-to-action-button" href="/cardapio/#carnes">CARNES</a></div>
-				</div>
-			</div>
-		</div>
-		<div class="section-image" style="width: 100%; display: flex; justify-content: center; align-items: center;">
-			<img style="width: 101%; max-height: 720px; overflow: hidden; object-fit: cover;" alt="Espetinho de Costela" src="/churrasquinho.png" />
+		<div style="text-align: center">
+			<div class="call-to-action" style="padding: 30px 0 50px;"><a class="black-call-to-action-button" href="/cardapio/#carnes">CARNES</a></div>
 		</div>
 	</section>
 	<section name="our-place">
-		<div class="section-text">
-			<h3 style="font-family: dinneuzeitgroteskltw01-_812426; margin: 0; font-weight: normal; letter-spacing: 0.05em; text-align: center; font-size: 30px;">O ESPAÇO</h3>
-			<h3 style="font-family: belindaw00-regular; margin: 0; font-weight: normal; text-align: center; font-size: 24px;">Amigável e descontraído</h3>
-			<p style="font: normal normal normal 17px/1.4em dinneuzeitgroteskltw01-_812426,sans-serif; color: #2F2E2E; padding: 0 38px; text-align: justify;">
-				Localizado na Av. Pequeno Principe, 2028, o Espaço Sublime é um ambiente relaxante, aconchegante e também é caminho para a praia do Campeche.
-			</p>
-		</div>
+		<h3 style="font-family: dinneuzeitgroteskltw01-_812426; margin: 0; font-weight: normal; letter-spacing: 0.05em; text-align: center; font-size: 30px;">O ESPAÇO</h3>
+		<h3 style="font-family: belindaw00-regular; margin: 0; font-weight: normal; text-align: center; font-size: 24px;">Amigável e descontraído</h3>
+		<p style="font: normal normal normal 17px/1.4em dinneuzeitgroteskltw01-_812426,sans-serif; color: #2F2E2E; padding: 0 38px; text-align: justify;">
+			Localizado na Av. Pequeno Principe, 2028, o Espaço Sublime é um ambiente relaxante, aconchegante e também é caminho para a praia do Campeche.
+		</p>
 		<div class="section-image">
 			<div style="display: flex; justify-content: center; align-items: center;">
 				<img style="width: 100%; height: 250px; object-fit: cover" alt="Ambiente" src="/ambiente.jpg" />
 			</div>
 		</div>
 	</section>
-	<section class="lightweight" style="background-color:#b5e8c5; margin-top: 0px; padding-top: 60px;">
+	<section name="lightweight" style="background-color:#b5e8c5; margin-top: 0px; padding-top: 60px;">
 		<h3 style="font-family: dinneuzeitgroteskltw01-_812426, sans-serif; margin: 0; font-size: 24px;">MUSICA & ENCONTROS</h3>
 		<h3 style="font-family: dinneuzeitgroteskltw01-_812426, sans-serif; margin: 0; font-size: 35px;">EVENTOS</h3>
 		<div class="section-image" style="width: 100%; display: flex; justify-content: center; align-items: center;">
@@ -416,57 +398,24 @@ section[name="secao-imagem-larga"] img {
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
-			/* margin-top: -154px; */
+			margin-top: -202px;
 			overflow-x: scroll;
 			overflow: scroll hidden;
 		}
 		section[name="carrousel"] .arrows {
-			margin-top: 0;
+			margin-top: 158px;
 			display: flex;
-			height: 0;
 			position: relative;
 			justify-content: space-between;
 		}
 		section[name="carrousel"] a {
 			padding: 4px 4px 0px 4px;
-			margin-top: 150px;
 		}
 		section[name="carrousel"] .image img {
 			object-fit: cover;
 			width: 100vw;
 			min-width: 100vw;
 			max-width: 100vw;
-		}
-		@media screen and (min-width: 780px) {
-			section[name="carrousel"] .image::-webkit-scrollbar {
-			height: 5px;
-			width: 5px;
-			}
-			section[name="carrousel"] .image {
-				height: 483px;
-			}
-			section[name="carrousel"] .image img {
-				width: 50vw;
-				min-width: 50vw;
-				max-width: 50vw;
-			}
-			section[name="carrousel"] a {
-				margin-top: 210px;
-			}
-			.footer-section {
-				display: flex;
-			}
-			.footer-section > * {
-				flex-basis: 25%;
-				padding: 0 10px;
-			}
-		}
-		@media screen and (min-width: 1450px) {
-			section[name="carrousel"] .image img {
-				width: 33.3333vw;
-				min-width: 33.3333vw;
-				max-width: 33.3333vw;
-			}
 		}
 	</style>
 	<section name="carrousel" style="margin: -5px 0;">
@@ -518,46 +467,73 @@ section[name="secao-imagem-larga"] img {
 			});
 		});
 	</script>
+	<style>
+		.text-wrapper {
+			margin: 0 20px 0 30px;
+		}
+		footer {
+			background-color: black;
+			color: white;
+			padding: 20px 0;
+			font-family: dinneuzeitgroteskltw01-_812426, sans-serif;
+		}
+		footer h4 {
+			font-size: 28px;
+			letter-spacing: 2px;
+			text-align: left;
+		}
+		footer p {
+			font-size: 18px;
+			margin-top: 20px;
+			margin-bottom: 28px;
+			font-weight: normal;
+			line-height: 1.4rem;
+			letter-spacing: 0.5px;
+		}
+		.last-line {
+			font-family: dinneuzeitgroteskltw01-_812426, sans-serif;
+			text-align: center;
+			font-size: 18px;
+			font-weight: normal;
+		}
+		.footer-section {
+			padding-top: 15px;
+		}
+		.a{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;}
+		.b{fill:none;stroke:white;stroke-linecap:round;stroke-linejoin:round;}
+		span.destaque {
+			color: #ccc;
+			letter-spacing: 0.5px;
+		}
+	</style>
 	<footer>
 		<div class="text-wrapper">
 			<div class="footer-section">
-				<div class="footer-group">
-					<h4>ENDEREÇO</h4>
-					<p>Av. Pequeno Príncipe, 2028<br/>
-						Campeche, Florianopolis, SC<br/>
-						88063-000
-					</p>
-				</div>
-				<div class="footer-group">
-					<h4>HORÁRIOS</h4>
-					<p>
-						ABERTO TODOS OS DIAS<br/>
-						De <span class="destaque">domingo</span> à <span class="destaque">quinta</span>, das 15:00 as 22:00<br/>
-						Na <span class="destaque">sexta</span> e <span class="destaque">sábado</span>, das 15:00 as 22:30
-				    </p>
-				</div>
-				<div class="footer-group">
-					<h4>CONTATO</h4>
-					<p>
-						sublimespaco@gmail.com<br/>
-						Instagram: <a style="color: #ccc" href="https://www.instagram.com/sublimespaco/">@sublimespaco</a><br/>
-						Facebook: <a style="color: #ccc" href="https://www.facebook.com/sublimespaco/">sublimespaco</a><br/>
-						Tel: <span style="color: #ddd; letter-spacing: 1px;">(48) 98490-3009</span>
-					</p>
-				</div>
-				<div class="footer-group">
-					<h4>NOVIDADES</h4>
-					<p>Siga nosso <a style="text-decoration: none; color: #eee" href="https://www.instagram.com/sublimespaco/">instagram</a> para saber das novidades, promoções e eventos!</p>
-				</div>
+				<h4>ENDEREÇO</h4>
+				<p>Av. Pequeno Príncipe, 2028<br/>
+					Campeche, Florianopolis, SC<br/>
+					88063-000
+				</p>
+				<h4>HORÁRIOS</h4>
+				<p>
+					ABERTO TODOS OS DIAS<br/>
+					De <span class="destaque">domingo</span> à <span class="destaque">quinta</span>, das 15:00 as 22:00<br/>
+					Na <span class="destaque">sexta</span> e <span class="destaque">sábado</span>, das 15:00 as 22:30
+				</p>
+				<h4>CONTATO</h4>
+				<p>
+					sublimespaco@gmail.com<br/>
+					Instagram: <a style="color: #ccc" href="https://www.instagram.com/sublimespaco/">@sublimespaco</a><br/>
+					Facebook: <a style="color: #ccc" href="https://www.facebook.com/sublimespaco/">sublimespaco</a><br/>
+					Tel: <span style="color: #ddd; letter-spacing: 1px;">(48) 98490-3009</span>
+				</p>
+				<h4>NOVIDADES</h4>
+				<p>Siga nosso instagram para saber das novidades, atualizações, comunicadoes e eventos!</p>
 			</div>
 			<div class="media-links small">
 				<div style="width: 105px; display: flex; justify-content: center; align-items: center">
 					<a target="_self" data-platform="instagram" title="Instagram" href="https://www.instagram.com/sublimespaco/">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 2 10 10">
-							<circle class="b" style="stroke-width: 0.8px;" cx="7" cy="7" r="2.022"/>
-							<circle class="b" style="stroke-width: 0.77px;" cx="9.672" cy="4.328" r="0.217"/>
-							<rect class="b" style="stroke-width: 0.7px;" x="2.378" y="2.378" width="9.244" height="9.244" rx="2.8"/>
-						</svg>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs></defs><rect class="b" x="0.5" y="0.5" width="13" height="13" rx="2.826"/><circle class="b" cx="7" cy="7" r="2.022"/><circle class="b" cx="9.672" cy="4.328" r="0.217"/><rect class="b" x="2.378" y="2.378" width="9.244" height="9.244" rx="2.311"/></svg>
 					</a>
 					<a target="_self" data-platform="facebook" title="Facebook" href="https://www.facebook.com/sublimespaco/">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs></defs><path class="b" d="M7.087,13.5H1.078A.578.578,0,0,1,.5,12.922V1.078A.578.578,0,0,1,1.078.5H12.922a.578.578,0,0,1,.578.578V12.922a.578.578,0,0,1-.578.578H9.4V8.589h1.478a.289.289,0,0,0,.287-.253L11.379,6.6a.288.288,0,0,0-.286-.324H9.4V5.662a.974.974,0,0,1,.974-.973H11.42a.289.289,0,0,0,.289-.289V2.667a.289.289,0,0,0-.289-.289H10.372A3.288,3.288,0,0,0,7.087,5.662v.616H5.642a.289.289,0,0,0-.289.289V8.3a.289.289,0,0,0,.289.289H7.087V13.5Z"/></svg>
@@ -568,7 +544,7 @@ section[name="secao-imagem-larga"] img {
 				</div>
 			</div>
 		</div>
-		<div class="last-line">©2021 Espaço Sublime</div>
+		<div class="last-line">©2020 Espaço Sublime - Feito com amor ♥</div>
 	</footer>
 </body>
 </html>

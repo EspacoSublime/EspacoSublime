@@ -1,0 +1,10 @@
+
+@font-face{
+    font-family:"DINNeuzeitGroteskLTW01-_812426";
+    src:url("./b41558bd-2862-46c0-abf7-536d2542fa26.eot?#iefix");
+    src:url("./b41558bd-2862-46c0-abf7-536d2542fa26.eot?#iefix") format("eot"),
+        url("./5cee8d6e-89ad-4d8c-a0ac-584d316b15ae.woff2") format("woff2"),
+        url("./388ef902-2c31-4818-abb1-a40dcd81f6d6.woff") format("woff"),
+        url("./29c60077-2614-4061-aa8d-5bcfdf7354bb.ttf") format("truetype"),
+        url("./76250d27-b353-4f3b-90c6-0ff635fabaab.svg") format("svg");
+}

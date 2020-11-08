@@ -1,0 +1,168 @@
+html,body {
+	margin: 0; padding: 0; width: 100vw; min-height: 100vh; overflow-x: hidden;
+}
+
+.a{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;}
+.b{fill:none;stroke:white;stroke-linecap:round;stroke-linejoin:round;}
+
+#verticalBar {
+	display: block;
+	height: 0px;
+	color: transparent;
+}
+
+.nav-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+nav {
+	width: 200px;
+	position: relative;
+	z-index: 10;
+	display: flex;
+	display: none;
+	justify-content: center;
+	flex-direction: column;
+	background-color: rgba(47, 46, 46, 0.84);
+	padding: 11px 0px;
+	margin-right: 10px;
+}
+
+nav a {
+	display: block;
+	padding: 5px;
+	color: white;
+	font-family: dinneuzeitgroteskltw01-_812426;
+	padding: 5px 20px;
+	font-size: 24px;
+}
+
+section[name="header"] {
+	height: 71px;
+	margin: 0;
+}
+
+.hamburguer-menu {
+	float: right;
+	margin: -43px 21px 0 0;
+	cursor: pointer;
+	padding: 10px 13px 8px 13px;
+}
+
+.project-title {
+	font-family: belindaw00-regular;
+	text-align: center;
+	font-size: 32px;
+	padding-top: 6px;
+	font-weight: normal;
+}
+
+.media-links {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15px;
+}
+
+.media-links.small {
+	margin: -10px 0 10px 0;
+	fill: white;
+	color: white;
+}
+
+.media-links a {
+	width: 48px;
+	height: 48px;
+	min-width: 48px;
+	padding: 8px;
+	/* display: block; */
+}
+
+h1, h2, h3, h4 {
+	text-align: center;
+	margin: 0;
+}
+
+.media-links.small a {
+	width: 28px;
+	height: 28px;
+	min-width: 28px;
+}
+
+section[name="address"] {
+	background: black;
+	color: white;
+	font-weight: bold;
+	font-family: dinneuzeitgroteskltw01-_812426, sans-serif;
+	text-align: center;
+	letter-spacing:0.05em;
+	padding: 10px 7px 11px 7px;
+	margin: 0;
+}
+
+.media-links a + a {
+	margin-left: 8px;
+}
+
+section[name="fold"] {
+	margin: -1px 0 0 0;
+}
+.background-wrapper {
+	background-color: #f9db79;
+	min-height: 100px;
+}
+
+@media screen and (min-width: 780px) {
+	section[name="header"] {
+		background-color: #f9db79;
+	}
+
+	.hamburguer-menu {
+		display: none;
+	}
+
+	.nav-wrapper {
+	    justify-content: flex-start;
+	    position: fixed;
+	    top: 75px;
+	    left: 0px;
+	    margin: 0;
+	    width: 50%;
+	    z-index: 12;
+	}
+
+	nav {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		background: none;
+		justify-content: flex-start;
+		margin-left: 80px;
+		width: auto;
+		text-shadow: 0 0 4px #ffffff59;
+		width: auto;
+		display: flex;
+		white-space: nowrap;
+		color: black;
+		text-decoration: none;
+		padding: 5px 14px;
+		font-size: 20px;
+	}
+
+	nav a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        font-size: 19px;
+        padding: 5px 10px;
+	}
+
+
+	nav a:hover {
+		text-decoration: underline;
+		color: #444;
+	}
+
+}

@@ -1,0 +1,50 @@
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    font-family: dinneuzeitgroteskltw01-_812426, sans-serif;
+}
+footer .text-wrapper {
+    margin: 0 20px 0 30px;
+}
+footer h4 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+footer p {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 28px;
+    font-weight: normal;
+    line-height: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+footer .last-line {
+    font-family: dinneuzeitgroteskltw01-_812426, sans-serif;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.footer-section {
+    padding-top: 15px;
+}
+
+footer span.destaque {
+    color: #ccc;
+    letter-spacing: 0.5px;
+}
+
+@media screen and (min-width: 780px) {
+    .footer-section {
+        display: flex;
+    }
+    .footer-section > * {
+        flex-basis: 25%;
+        padding: 0 10px;
+    }
+}

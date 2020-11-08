@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="/belinda/belinda.css">
+	<link rel="stylesheet" href="/dinn/dinn.css">
+	<link rel="stylesheet" href="/footer.css">
+	<link rel="stylesheet" href="/lulo-clean/lulo-clean.css">
+    <link rel="stylesheet" href="/header.css">
+</head>
+<body>
+	<section name="address">Av. Pequeno Príncipe, 2028 - Campeche, Florianopolis, SC <span id="verticalBar">|</span> Todos os dias das 15:00 as 22:00</section>
+	<section name="header">
+		<h1 class="project-title">Espaço Sublime</h1>
+		<a href="#" class="hamburguer-menu" onclick="onHamburguerClick(event)">
+			<svg class="hamb-menu-collapsed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="24" height="24"><defs></defs><line class="a" x1="13.5" y1="2" x2="0.5" y2="2"/><line class="a" x1="13.5" y1="7" x2="0.5" y2="7"/><line class="a" x1="13.5" y1="12" x2="0.5" y2="12"/></svg>
+			<svg class="hamb-menu-expanded" style="display: none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="24" height="24"><defs></defs><line class="a" x1="13.5" y1="13.5" x2="0.5" y2="0.5"/><line class="a" x1="9" y1="5" x2="13.5" y2="0.5"/><line class="a" x1="5" y1="9" x2="0.5" y2="13.5"/></svg>
+		</a>
+		<div class="nav-wrapper">
+			<nav>
+				<a href="/">PAGINA PRINCIPAL</a>
+				<a href="/cardapio/">CARDAPIO</a>
+				<a href="/quem-somos/">QUEM SOMOS</a>
+			</nav>
+		</div>
+		<script>
+			let isExpanded = false;
+			function onHamburguerClick(event) {
+				event.preventDefault();
+				if (isExpanded) {
+					isExpanded = false;
+					document.querySelector("nav").style.display = "none";
+					document.querySelector(".hamb-menu-collapsed").style.display = "block";
+					document.querySelector(".hamb-menu-expanded").style.display = "none";
+				} else {
+					isExpanded = true;
+					document.querySelector("nav").style.display = "flex";
+					document.querySelector(".hamb-menu-collapsed").style.display = "none";
+					document.querySelector(".hamb-menu-expanded").style.display = "block";
+				}
+			}
+		</script>
+	</section>
+	<style>
+		.background-wrapper {
+			color: #222;
+			font-family: dinneuzeitgroteskltw01-_812426, sans-serif;
+			text-align: center;
+		}
+
+		h2 {
+			font-weight: normal;
+		}
+
+		.background-wrapper {
+			display: flex;
+		}
+
+		.background-wrapper img {
+	
+			color: #000;
+			font-family: dinneuzeitgroteskltw01-_812426, sans-serif;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			margin-top: -80px;
+			text-shadow: 0px 0px 17px #000000aa, 0px 0px 2px #00000055;
+			font-size: 20px;
+			color: white;
+			background: #f9db79;
+			background: red;
+			background: rebeccapurple;
+			background: radial-gradient(black, transparent);
+			background: r;
+			margin-top: -80px;
+			text-shadow: 0px 0px 17px #000000aa, 0px 0px 2px #00000055;
+			font-size: 20px;
+			color: white;
+		}
+
+		section[name="quem-somos"] h1, section[name="quem-somos"] h2 {
+			letter-spacing: 1px;
+			font-size: 36px;
+		}
+
+		section[name="quem-somos"] > div {
+			max-width: 700px;
+			position: relative;
+			top: 0;
+			left: 0;
+			z-index: 9;
+		}
+	</style>
+	<section name="fold">
+		<div class="background-wrapper">
+			<style>
+				section[name="carrousel"] svg {
+					width: 36px;
+					height: 36px;
+					background: rgba(255, 255, 255, 0.4);
+					border-radius: 36px;
+				}
+				section[name="carrousel"] .image {
+					height: 360px;
+					max-width: 100vw;
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					/* margin-top: -154px; */
+					overflow-x: scroll;
+					overflow: scroll hidden;
+				}
+				section[name="carrousel"] .arrows {
+					margin-top: 0;
+					display: flex;
+					height: 0;
+					position: relative;
+					justify-content: space-between;
+				}
+				section[name="carrousel"] a {
+					padding: 4px 4px 0px 4px;
+					margin-top: 150px;
+				}
+				section[name="carrousel"] .image img {
+					object-fit: cover;
+					width: 100vw;
+					min-width: 100vw;
+					max-width: 100vw;
+				}
+				@media screen and (min-width: 780px) {
+					section[name="carrousel"] .image::-webkit-scrollbar {
+					height: 5px;
+					width: 5px;
+					}
+					section[name="carrousel"] .image {
+						height: 483px;
+					}
+					section[name="carrousel"] .image img {
+						width: 50vw;
+						min-width: 50vw;
+						max-width: 50vw;
+					}
+					section[name="carrousel"] a {
+						margin-top: 210px;
+					}
+					.footer-section {
+						display: flex;
+					}
+					.footer-section > * {
+						flex-basis: 25%;
+						padding: 0 10px;
+					}
+				}
+				@media screen and (min-width: 1450px) {
+					section[name="carrousel"] .image img {
+						width: 33.3333vw;
+						min-width: 33.3333vw;
+						max-width: 33.3333vw;
+					}
+				}
+			</style>
+			<script>
+				window.addEventListener("load", function() {
+					window.lastClick = null;
+					function loop() {
+						const time = (new Date()).getTime();
+						if (typeof window.lastClick !== "number" || Math.abs(time - window.lastClick) > 7000) {
+							const imageWrapper = document.querySelector(".image");
+							if (imageWrapper) {
+								const startingScroll = imageWrapper.scrollLeft;
+								if (startingScroll+1 < imageWrapper.scrollWidth) {
+									imageWrapper.scrollTo(startingScroll+1, 0);
+								}
+							}
+						}
+						requestAnimationFrame(loop);
+					}
+					loop();
+					document.querySelectorAll('section[name="carrousel"]').forEach(function (carrousel) {
+						const animationSize = 30;
+						const imageWrapper = document.querySelector(".image");
+						let isAnimating = false;
+						carrousel.querySelectorAll(".arrows > a").forEach(function (anchor, index) {
+							anchor.addEventListener("click", function() {
+								window.lastClick = (new Date()).getTime();
+								if (isAnimating) {
+									return;
+								}
+								isAnimating = true;
+								let animationProgress = 0;
+								const startingScroll = imageWrapper.scrollLeft;
+								const targetScroll = Math.max(Math.min(index === 0 ? (startingScroll - window.innerWidth) : (startingScroll + window.innerWidth), imageWrapper.scrollWidth), 0);
+								const interval = setInterval(function() {
+									if (animationProgress < animationSize) {
+										animationProgress++;
+										let percentage = Math.max(Math.min(animationProgress / animationSize, 1), 0);
+										percentage = percentage < .5 ? 2*percentage*percentage : -1+(4-2*percentage)*percentage;
+										imageWrapper.scrollTo(startingScroll + (targetScroll - startingScroll) * percentage, 0);
+									} else {
+										clearInterval(interval);
+										isAnimating = false;
+									}
+								}, 16);
+							});
+						});
+					});
+				});
+			</script>
+			<section name="carrousel" style="margin: -5px 0;">
+				<div class="arrows" style="">
+					<a href="#" onclick="event.preventDefault()">
+						<svg xmlns="http://www.w3.org/2000/svg" style="margin-left: 15px;" viewBox="0 0 14 14"><defs><style>.a{fill:none; stroke:#000; stroke-linecap:round; stroke-linejoin:round;}</style></defs><polyline class="a" points="7.999 4 5 7 8.001 10"/><circle class="a" cx="7" cy="7" r="6.5"/></svg>
+					</a>
+					<a href="#" onclick="event.preventDefault()">
+						<svg xmlns="http://www.w3.org/2000/svg" style="margin-right: 15px;" viewBox="0 0 14 14"><defs><style>.a{fill:none; stroke:#000; stroke-linecap:round; stroke-linejoin:round;}</style></defs><polyline class="a" points="6 4 9 7 6 10"/><circle class="a" cx="7" cy="7" r="6.5"/></svg>
+					</a>
+				</div>
+				<div class="image">
+					<img src="/banner-terrivel.jpg">
+					<img src="/espacosublime.jpg">
+					<img src="/espacosublime-interno.jpg">
+					<img src="/nicole.jpg">
+					<img src="/frente-sublime.jpg">
+					<img src="/sublime-interno.jpg">
+				</div>
+			</section>
+		</div>
+	</section>
+	<section name="quem-somos">
+		<div>
+			<h1>QUEM SOMOS</h1>
+			<p>Area em construção</p>
+		</div>
+	</section>
+	<footer>
+		<div class="text-wrapper">
+			<div class="footer-section">
+				<div class="footer-group">
+					<h4>ENDEREÇO</h4>
+					<p>Av. Pequeno Príncipe, 2028<br/>
+						Campeche, Florianopolis, SC<br/>
+						88063-000
+					</p>
+				</div>
+				<div class="footer-group">
+					<h4>HORÁRIOS</h4>
+					<p>
+						ABERTO TODOS OS DIAS<br/>
+						De <span class="destaque">domingo</span> à <span class="destaque">quinta</span>, das 15:00 as 22:00<br/>
+						Na <span class="destaque">sexta</span> e <span class="destaque">sábado</span>, das 15:00 as 22:30
+				    </p>
+				</div>
+				<div class="footer-group">
+					<h4>CONTATO</h4>
+					<p>
+						sublimespaco@gmail.com<br/>
+						Instagram: <a style="color: #ccc" href="https://www.instagram.com/sublimespaco/">@sublimespaco</a><br/>
+						Facebook: <a style="color: #ccc" href="https://www.facebook.com/sublimespaco/">sublimespaco</a><br/>
+						Tel: <span style="color: #ddd; letter-spacing: 1px;">(48) 98490-3009</span>
+					</p>
+				</div>
+				<div class="footer-group">
+					<h4>NOVIDADES</h4>
+					<p>Siga nosso <a style="text-decoration: none; color: #eee" href="https://www.instagram.com/sublimespaco/">instagram</a> para saber das novidades, promoções e eventos!</p>
+				</div>
+			</div>
+			<div class="media-links small">
+				<div style="width: 105px; display: flex; justify-content: center; align-items: center">
+					<a target="_self" data-platform="instagram" title="Instagram" href="https://www.instagram.com/sublimespaco/">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 2 10 10">
+							<circle class="b" style="stroke-width: 0.8px;" cx="7" cy="7" r="2.022"/>
+							<circle class="b" style="stroke-width: 0.77px;" cx="9.672" cy="4.328" r="0.217"/>
+							<rect class="b" style="stroke-width: 0.7px;" x="2.378" y="2.378" width="9.244" height="9.244" rx="2.8"/>
+						</svg>
+					</a>
+					<a target="_self" data-platform="facebook" title="Facebook" href="https://www.facebook.com/sublimespaco/">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs></defs><path class="b" d="M7.087,13.5H1.078A.578.578,0,0,1,.5,12.922V1.078A.578.578,0,0,1,1.078.5H12.922a.578.578,0,0,1,.578.578V12.922a.578.578,0,0,1-.578.578H9.4V8.589h1.478a.289.289,0,0,0,.287-.253L11.379,6.6a.288.288,0,0,0-.286-.324H9.4V5.662a.974.974,0,0,1,.974-.973H11.42a.289.289,0,0,0,.289-.289V2.667a.289.289,0,0,0-.289-.289H10.372A3.288,3.288,0,0,0,7.087,5.662v.616H5.642a.289.289,0,0,0-.289.289V8.3a.289.289,0,0,0,.289.289H7.087V13.5Z"/></svg>
+					</a>
+					<a target="_self" data-platform="email" title="Email" href="mailto:sublimespaco@gmail.com">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><defs></defs><rect class="b" x="0.5" y="1.8" width="13" height="10.4" rx="0.867"/><line class="b" x1="2.772" y1="12.2" x2="2.772" y2="5.73"/><line class="b" x1="11.228" y1="12.2" x2="11.228" y2="5.73"/><polyline class="b" points="0.5 4.003 7 8.944 13.5 4.003"/></svg>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="last-line">©2021 Espaço Sublime</div>
+	</footer>
+</body>
+</html>
