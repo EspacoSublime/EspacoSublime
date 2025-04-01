@@ -1,4 +1,4 @@
-# Site do Espaço Sublime
+# Site do Espaço Sublime (Repositorio)
 
 Este site é estático, ele só tem html + css + js e algumas imagens. O github hospeda ele. Ele foi originalmente criado por Guilherme Rossato. Para contato acesse o [Github](https://github.com/GuilhermeRossato), ou o [Linkedin](https://www.linkedin.com/in/guilherme-rossato/), ou por whats se você tiver ele.
 
